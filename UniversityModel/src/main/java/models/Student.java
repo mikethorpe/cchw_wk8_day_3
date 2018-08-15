@@ -10,11 +10,13 @@ public class Student {
 	private String name;
 	private int age;
 	private int enrollmentNumber;
+	private Course course;
 
-	public Student(String name, int age, int enrollmentNumber) {
+	public Student(String name, int age, int enrollmentNumber, Course course) {
 		this.name = name;
 		this.age = age;
 		this.enrollmentNumber = enrollmentNumber;
+		this.course = course;
 	}
 
 	public Student() {
@@ -56,5 +58,15 @@ public class Student {
 
 	public void setEnrollmentNumber(int enrollmentNumber) {
 		this.enrollmentNumber = enrollmentNumber;
+	}
+
+	@ManyToOne()
+	@JoinColumn(name = "course_id", nullable = false)
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
 	}
 }

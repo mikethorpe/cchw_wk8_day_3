@@ -1,4 +1,5 @@
 import db.DBHelper;
+import db.DBLesson;
 import models.Course;
 import models.Lesson;
 import models.Student;
@@ -27,5 +28,10 @@ public class Runner {
 
 		Lesson hibernateOrm = new Lesson("Hibernate ORM", 2, softwareDevelopment);
 		DBHelper.save(hibernateOrm);
+
+		DBLesson.addStudentToLesson(hibernateOrm, stuart);
+		DBLesson.addStudentToLesson(hibernateOrm, vicky);
+
+
 	}
 }

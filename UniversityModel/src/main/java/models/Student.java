@@ -16,6 +16,7 @@ public class Student {
 	private int enrollmentNumber;
 	private Course course;
 	private List<Lesson> lessons;
+	private Mentor mentor;
 
 	public Student(String name, int age, int enrollmentNumber, Course course) {
 		this.name = name;
@@ -91,8 +92,19 @@ public class Student {
 		this.lessons = lessons;
 	}
 
+	@OneToOne(mappedBy = "student", fetch = FetchType.LAZY)
+	public Mentor getMentor() {
+		return mentor;
+	}
+
+	public void setMentor(Mentor mentor) {
+		this.mentor = mentor;
+	}
+
 	public void addLesson(Lesson lesson){
 		this.lessons.add(lesson);
 	}
+
+
 
 }

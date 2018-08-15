@@ -2,6 +2,7 @@ import db.DBHelper;
 import db.DBLesson;
 import models.Course;
 import models.Lesson;
+import models.Mentor;
 import models.Student;
 
 import java.util.List;
@@ -32,6 +33,7 @@ public class Runner {
 		DBLesson.addStudentToLesson(hibernateOrm, stuart);
 		DBLesson.addStudentToLesson(hibernateOrm, vicky);
 
-
+		Mentor colin = new Mentor("Colin", stuart);
+		DBHelper.save(colin);
 	}
 }

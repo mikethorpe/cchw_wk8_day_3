@@ -87,7 +87,7 @@ public class DBHelper {
 		try {
 			Criteria cr = session.createCriteria(classType);
 			cr.add(Restrictions.eq("id", id));
-			result = (T) cr.list();
+			result = (T) cr.uniqueResult();
 		}
 		catch (HibernateException ex){
 			ex.printStackTrace();

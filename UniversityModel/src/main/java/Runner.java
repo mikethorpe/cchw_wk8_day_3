@@ -1,5 +1,6 @@
 import db.DBHelper;
 import models.Course;
+import models.Lesson;
 import models.Student;
 
 import java.util.List;
@@ -24,5 +25,7 @@ public class Runner {
 		List<Student> allStudents = DBHelper.findAll(Student.class);
 		Student findStuart = DBHelper.findById(Student.class, 1);
 
+		Lesson hibernateOrm = new Lesson("Hibernate ORM", 2, softwareDevelopment);
+		DBHelper.save(hibernateOrm);
 	}
 }

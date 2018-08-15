@@ -60,7 +60,7 @@ public class Student {
 		this.enrollmentNumber = enrollmentNumber;
 	}
 
-	@ManyToOne()
+	@ManyToOne
 	@JoinColumn(name = "course_id", nullable = false)
 	public Course getCourse() {
 		return course;

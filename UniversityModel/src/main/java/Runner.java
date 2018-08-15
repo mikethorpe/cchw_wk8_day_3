@@ -1,6 +1,8 @@
 import db.DBHelper;
 import models.Student;
 
+import java.util.List;
+
 public class Runner {
 
 	public static void main(String[] args) {
@@ -15,5 +17,8 @@ public class Runner {
 		vicky.setName("Victoria");
 		DBHelper.update(vicky);
 
+		List<Student> allStudents = DBHelper.findAll(Student.class);
+		Student findStuart = DBHelper.findById(Student.class, 1);
+		
 	}
 }

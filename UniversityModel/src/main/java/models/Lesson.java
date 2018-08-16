@@ -1,7 +1,6 @@
 package models;
 
 import org.hibernate.annotations.Cascade;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 import javax.persistence.*;
 import java.util.ArrayList;

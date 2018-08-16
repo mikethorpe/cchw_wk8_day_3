@@ -1,6 +1,5 @@
 package models;
 
-import javax.naming.Name;
 import javax.persistence.*;
 
 @Entity
